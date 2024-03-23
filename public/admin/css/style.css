@@ -1,0 +1,836 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: min-content;
+    justify-content: space-between;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    height: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #fff;
+    color: #ffa1cf;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+.header {
+    background: #ffa1cf;
+}
+
+.header .row {
+    margin-top: 70px;
+}
+
+.categories {
+    width: 80%;
+    margin: auto;
+    margin-top: 650px;
+}
+
+.categories img {
+    width: 400px;
+}
+
+.col-3 h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.col-3:hover h3 {
+    color: #ff4500; /* Ganti warna sesuai preferensi Anda */
+}
+
+.col-3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s;
+}
+
+.col-3:hover img {
+    transform: scale(1.05); /* Scaling gambar saat dihover */
+}
+
+.col-3 .content {
+    padding: 15px;
+    background-color: #eaeaea; /* Ubah warna sesuai preferensi Anda */
+    border-radius: 0 0 10px 10px;
+}
+
+.col-3 h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+    transition: color 0.3s, text-shadow 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ubah sesuai preferensi Anda */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Atur ruang antar kolom */
+}
+
+.col-3 {
+    margin-right: 20px; /* Atur ruang antar kolom */
+}
+
+.small-container {
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-4 {
+    flex-basis: calc(
+        33.33% - 20px
+    ); /* Setengah dari lebar parent dengan jarak 10px di antara elemen */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Sesuaikan jarak antar elemen */
+    margin-right: 20px; /* Jarak antar elemen secara horizontal */
+    padding: 10px;
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex; /* Menjadikan container flexbox */
+    flex-direction: column; /* Membuat anak-anak elemen disusun dalam kolom */
+    align-items: center; /* Menyusun anak-anak elemen di tengah-tengah secara vertikal */
+}
+
+.col-4:nth-child(3n) {
+    margin-right: 0; /* Menghilangkan margin-right pada elemen ke-3 untuk mendekatkannya */
+}
+
+.col-4 img {
+    max-width: 100%; /* Memastikan gambar tidak melebihi ukuran wadahnya */
+    border-radius: 5px; /* Memberikan sudut pada gambar */
+}
+
+.col-4 h4 {
+    margin-top: 10px;
+    font-size: 0.75em; /* Memperbesar ukuran teks judul */
+    color: #000000; /* Warna teks judul */
+}
+
+.col-4 h5 {
+    margin-top: 10px;
+    font-size: 0.5em; /* Ukuran teks artikel */
+    color: #000000; /* Warna teks artikel */
+}
+
+/* Efek hover untuk memberikan animasi saat dihover */
+.col-4:hover {
+    transform: scale(1.05); /* Memperbesar elemen saat dihover */
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #ffa1cf;
+}
+
+.title::after {
+    content: "";
+    background: #ffa1cf;
+    width: 80px;
+}
+
+.line-with-border {
+    border: 1px solid #000;
+    margin: 20px 0;
+}
+
+.categories-low {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Memastikan baris baru jika tidak cukup ruang */
+    justify-content: flex-start; /* Menyusun kolom secara otomatis ke bawah */
+    align-items: flex-start; /* Mengatur konten pada bagian atas container */
+}
+
+.categories-low img {
+    width: 100%; /* Mengisi lebar penuh dari container parent */
+    max-width: 400px; /* Maksimum lebar gambar adalah 400px */
+    height: auto; /* Menjaga rasio aspek gambar */
+    margin-bottom: 20px; /* Ruang antar gambar */
+}
+
+.col-5 {
+    flex-basis: calc(33.33% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Sesuaikan jarak antar elemen */
+    margin-right: 20px; /* Jarak antar elemen secara horizontal */
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.col-5 img {
+    width: 100%;
+    max-width: 100%; /* Memastikan gambar tidak melebihi ukuran wadahnya */
+    border-radius: 5px; /* Memberikan sudut pada gambar */
+}
+
+.col-5:nth-child(3n) {
+    margin-right: 0; /* Menghilangkan margin-right pada elemen ke-3 untuk mendekatkannya */
+}
+
+.col-5 h4 {
+    margin-top: 10px;
+    font-size: 1em; /* Memperbesar ukuran teks judul */
+    color: #ffffff; /* Warna teks judul */
+}
+
+.col-5 h5 {
+    margin-top: 10px;
+    font-size: 0.75em; /* Ukuran teks artikel */
+    color: #555; /* Warna teks artikel */
+}
+
+/* Efek hover untuk memberikan animasi saat dihover */
+.col-5:hover {
+    transform: scale(1.05); /* Memperbesar elemen saat dihover */
+}
+
+.col-6 {
+    display: flex block;
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-6 img {
+    width: 100%;
+}
+
+.col-7 {
+    flex-basis: calc(
+        33.33% - 20px
+    ); /* Setengah dari lebar parent dengan jarak 10px di antara elemen */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Sesuaikan jarak antar elemen */
+    margin-right: 20px; /* Jarak antar elemen secara horizontal */
+    padding: 10px;
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex; /* Menjadikan container flexbox */
+    flex-direction: column; /* Membuat anak-anak elemen disusun dalam kolom */
+    align-items: center; /* Menyusun anak-anak elemen di tengah-tengah secara vertikal */
+}
+
+.col-7:nth-child(3n) {
+    margin-right: 0; /* Menghilangkan margin-right pada elemen ke-3 untuk mendekatkannya */
+}
+
+.col-7 img {
+    max-width: 100%; /* Memastikan gambar tidak melebihi ukuran wadahnya */
+    border-radius: 5px; /* Memberikan sudut pada gambar */
+    height: 210;
+    width: 210px;
+    height: 285px;
+}
+
+.col-7 h4 {
+    margin-top: 10px;
+    font-size: 0.75em; /* Memperbesar ukuran teks judul */
+    color: #000000; /* Warna teks judul */
+}
+
+.col-7 h5 {
+    margin-top: 10px;
+    font-size: 0.5em; /* Ukuran teks artikel */
+    color: #000000; /* Warna teks artikel */
+}
+
+/* Efek hover untuk memberikan animasi saat dihover */
+.col-7:hover {
+    transform: scale(1.05); /* Memperbesar elemen saat dihover */
+}
+
+.reg-form {
+    max-width: none;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Tambahkan shadow di sini */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.login-checkbox {
+    margin-bottom: 20px;
+}
+
+.login-checkbox label {
+    display: flex;
+    align-items: center;
+}
+
+.login-checkbox input {
+    margin-right: 8px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.register-link a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+    background: #ffa1cf;
+    color: black;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.foot-container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex-basis: 25%;
+    min-height: 150px;
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.footer hr {
+    border: none;
+    background: black;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+.table-responsive {
+    margin: 30px 0;
+}
+.table-wrapper {
+    min-width: 1000px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+    min-width: 100%;
+}
+.table-title h2 {
+    margin: 8px 0 0;
+    font-size: 22px;
+}
+.search-box {
+    position: relative;
+    float: right;
+}
+.search-box input {
+    height: 34px;
+    border-radius: 20px;
+    padding-left: 35px;
+    border-color: #ddd;
+    box-shadow: none;
+}
+.search-box input:focus {
+    border-color: #3fbae4;
+}
+.search-box i {
+    color: #a0a5b1;
+    position: absolute;
+    font-size: 19px;
+    top: 8px;
+    left: 10px;
+}
+table.table tr th,
+table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table td:last-child {
+    width: 130px;
+}
+table.table td a {
+    color: #a0a5b1;
+    display: inline-block;
+    margin: 0 5px;
+}
+table.table td a.view {
+    color: #03a9f4;
+}
+table.table td a.edit {
+    color: #ffc107;
+}
+table.table td a.delete {
+    color: #e34724;
+}
+table.table td i {
+    font-size: 19px;
+}
+.pagination {
+    float: right;
+    margin: 0 0 5px;
+}
+.pagination li a {
+    border: none;
+    font-size: 95%;
+    width: 30px;
+    height: 30px;
+    color: #999;
+    margin: 0 2px;
+    line-height: 30px;
+    border-radius: 30px !important;
+    text-align: center;
+    padding: 0;
+}
+.pagination li a:hover {
+    color: #666;
+}
+.pagination li.active a {
+    background: #03a9f4;
+}
+.pagination li.active a:hover {
+    background: #0397d6;
+}
+.pagination li.disabled i {
+    color: #ccc;
+}
+.pagination li i {
+    font-size: 16px;
+    padding-top: 6px;
+}
+.hint-text {
+    float: left;
+    margin-top: 6px;
+    font-size: 95%;
+}
+
+/* CONTENT */
+.content * {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+.content img {
+    max-width: 100%;
+}
+.content a {
+    color: #333;
+}
+.content a:hover {
+    color: #4fd675;
+}
+.content ol,
+.content ul {
+    padding-left: 20px;
+}
+.content ol li,
+.content ul li {
+    margin-bottom: 10px;
+}
+.content ul {
+    padding-left: 0;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+.content ul li {
+    padding-left: 20px;
+    position: relative;
+}
+.content ul li::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #4fd675;
+    left: 3px;
+    top: 8px;
+}
+.content table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #ebebeb;
+}
+.content table td,
+.content table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    margin-bottom: 0;
+}
+.content tr:not(:last-child) {
+    border-bottom: 1px solid #ebebeb;
+}
+.content th {
+    font-weight: 500;
+}
+.content thead {
+    background: #f9f9f9;
+    margin-bottom: 0;
+}
+.content thead tr {
+    border-bottom: 1px solid #ebebeb;
+}
+.content tbody {
+    background: white;
+    margin-bottom: 0;
+}
+.content .notices {
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+.content .notices p {
+    padding: 10px;
+    margin-bottom: 0;
+    background-color: #fff !important;
+}
+.content .notices p::before {
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    font-family: "themify";
+    font-weight: 900;
+    content: "\e717";
+    left: 10px;
+}
+.content .notices.note p {
+    border-top: 30px solid #6ab0de;
+    background: #f9f9f9;
+}
+.content .notices.note p::after {
+    content: "Note";
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    left: 2rem;
+}
+.content .notices.tip p {
+    border-top: 30px solid #78c578;
+    background: #f9f9f9;
+}
+.content .notices.tip p::after {
+    content: "Tip";
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    left: 2rem;
+}
+.content .notices.info p {
+    border-top: 30px solid #f0b37e;
+    background: #f9f9f9;
+}
+.content .notices.info p::after {
+    content: "Info";
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    left: 2rem;
+}
+.content .notices.warning p {
+    border-top: 30px solid #e06f6c;
+    background: #f9f9f9;
+}
+.content .notices.warning p::after {
+    content: "Warning";
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    left: 2rem;
+}
+.content blockquote {
+    font-size: 20px !important;
+    color: #555;
+    padding: 20px 40px;
+    border-left: 2px solid #4fd675;
+    margin: 40px 0;
+    font-weight: bold;
+    background: #fff;
+}
+.content blockquote p {
+    margin-bottom: 0 !important;
+}
+.content pre {
+    display: block;
+    padding: 9.5px;
+    margin: 10px 0px 10px;
+    white-space: pre-wrap;
+}
+.content code {
+    margin-bottom: 0 !important;
+    font-size: 100%;
+}
+
+/* Comment Section */
+.comment-section {
+    margin-top: 20px;
+    margin-bottom: 40px; /* Tambahkan margin-bottom di sini */
+}
+
+.comment-heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.comment-box {
+    margin-bottom: 20px;
+}
+
+.comment-label {
+    font-weight: bold;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-meta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comment-small-label {
+    margin-right: 10px;
+}
+
+/* Optional: Add additional styling for the submit button */
+.comment-submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-menu {
+    width: 250px; /* Atur lebar formulir dropdown */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Atur jarak antar elemen formulir */
+}
+
+.form-check-input {
+    margin-top: 0.3rem; /* Atur jarak checkbox dari label */
+}
+
+.btn-primary {
+    width: 100%; /* Tombol penuh lebar */
+}
+
+/* Biar dropdown tidak tertutup saat diklik */
+.dropdown-menu.keep-open {
+    padding: 15px;
+    width: auto !important;
+    display: block !important;
+}
+
+.card {
+    border: none;
+    height: 320px;
+}
+.forms-inputs {
+    position: relative;
+}
+.forms-inputs span {
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+.forms-inputs input {
+    height: 50px;
+    border: 2px solid #eee;
+}
+.forms-inputs input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #000;
+}
+.btn {
+    height: 50px;
+}
+.success-data {
+    display: flex;
+    flex-direction: column;
+}
+.bxs-badge-check {
+    font-size: 90px;
+}
+
+.dashboard-container {
+    background-color: #3498db; /* background color for the dashboard */
+    color: #ffffff; /* text color */
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
