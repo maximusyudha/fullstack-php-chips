@@ -1,0 +1,371 @@
+body {
+    background: linear-gradient(
+        to right,
+        rgb(255, 255, 255),
+        rgb(187, 233, 236)
+    );
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: min-content;
+    justify-content: space-between;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    height: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    margin-bottom: 250px;
+    transition: transform 0.5s; /* Adding transition for smooth effect */
+}
+
+.col-2:hover {
+    transform: scale(1.05); /* Scale up the element on hover */
+}
+
+.col-2 img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.col-2 h1 {
+    font-size: 48px; /* Decreased font size for better readability */
+    font-weight: bold;
+    line-height: 56px; /* Adjusted line height for better spacing */
+    margin-bottom: 20px; /* Added some bottom margin for spacing */
+}
+
+.col-2 h5 {
+    font-size: 18px; /* Decreased font size for better readability */
+    line-height: 24px; /* Adjusted line height for better spacing */
+    font-weight: lighter;
+    color: #555;
+    margin: 0; /* Reset margin for consistent spacing */
+}
+
+.btn {
+    display: inline-block;
+    background: #fff;
+    color: #ffa1cf;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+.header {
+    background: #ffa1cf;
+}
+
+.header .row {
+    margin-top: 70px;
+}
+
+.categories {
+    width: 80%;
+    margin: auto;
+    margin-top: 650px;
+}
+
+.categories img {
+    width: 400px;
+}
+
+.col-3 h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.col-3:hover h3 {
+    color: #ff4500; /* Ganti warna sesuai preferensi Anda */
+}
+
+.col-3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s;
+}
+
+.col-3:hover img {
+    transform: scale(1.05); /* Scaling gambar saat dihover */
+}
+
+.col-3 .content {
+    padding: 15px;
+    background-color: #eaeaea; /* Ubah warna sesuai preferensi Anda */
+    border-radius: 0 0 10px 10px;
+}
+
+.col-3 h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+    transition: color 0.3s, text-shadow 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ubah sesuai preferensi Anda */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Atur ruang antar kolom */
+}
+
+.col-3 {
+    margin-right: 20px; /* Atur ruang antar kolom */
+}
+
+.small-container {
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-4 {
+    flex-basis: calc(
+        33.33% - 20px
+    ); /* Setengah dari lebar parent dengan jarak 10px di antara elemen */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Sesuaikan jarak antar elemen */
+    margin-right: 20px; /* Jarak antar elemen secara horizontal */
+    padding: 10px;
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex; /* Menjadikan container flexbox */
+    flex-direction: column; /* Membuat anak-anak elemen disusun dalam kolom */
+    align-items: center; /* Menyusun anak-anak elemen di tengah-tengah secara vertikal */
+}
+
+.col-4:nth-child(3n) {
+    margin-right: 0; /* Menghilangkan margin-right pada elemen ke-3 untuk mendekatkannya */
+}
+
+.col-4 img {
+    max-width: 100%;
+    max-height: min-content;
+}
+
+.col-4 h4 {
+    margin-top: 10px;
+    font-size: 0.75em; /* Memperbesar ukuran teks judul */
+    color: #000000; /* Warna teks judul */
+}
+
+.col-4 h5 {
+    margin-top: 10px;
+    font-size: 0.5em; /* Ukuran teks artikel */
+    color: #000000; /* Warna teks artikel */
+}
+
+/* Efek hover untuk memberikan animasi saat dihover */
+.col-4:hover {
+    transform: scale(1.05); /* Memperbesar elemen saat dihover */
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #ffa1cf;
+}
+
+.title::after {
+    content: "";
+    background: #ffa1cf;
+    width: 80px;
+}
+
+.line-with-border {
+    border: 1px solid #000;
+    margin: 20px 0;
+}
+
+.categories-low {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Memastikan baris baru jika tidak cukup ruang */
+    justify-content: flex-start; /* Menyusun kolom secara otomatis ke bawah */
+    align-items: flex-start; /* Mengatur konten pada bagian atas container */
+}
+
+.categories-low img {
+    width: 100%; /* Mengisi lebar penuh dari container parent */
+    max-width: 400px; /* Maksimum lebar gambar adalah 400px */
+    height: auto; /* Menjaga rasio aspek gambar */
+    margin-bottom: 20px; /* Ruang antar gambar */
+}
+
+.col-5 {
+    flex-basis: calc(33.33% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Sesuaikan jarak antar elemen */
+    margin-right: 20px; /* Jarak antar elemen secara horizontal */
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.col-5 img {
+    width: 100%;
+    max-width: 100%; /* Memastikan gambar tidak melebihi ukuran wadahnya */
+    border-radius: 5px; /* Memberikan sudut pada gambar */
+}
+
+.col-5:nth-child(3n) {
+    margin-right: 0; /* Menghilangkan margin-right pada elemen ke-3 untuk mendekatkannya */
+}
+
+.col-5 h4 {
+    margin-top: 10px;
+    font-size: 1em; /* Memperbesar ukuran teks judul */
+    color: #ffffff; /* Warna teks judul */
+}
+
+.col-5 h5 {
+    margin-top: 10px;
+    font-size: 0.75em; /* Ukuran teks artikel */
+    color: #555; /* Warna teks artikel */
+}
+
+/* Efek hover untuk memberikan animasi saat dihover */
+.col-5:hover {
+    transform: scale(1.05); /* Memperbesar elemen saat dihover */
+}
+
+.col-6 {
+    display: flex block;
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-6 img {
+    width: 100%;
+}
+
+.col-7 {
+    flex-basis: calc(
+        33.33% - 20px
+    ); /* Setengah dari lebar parent dengan jarak 10px di antara elemen */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Sesuaikan jarak antar elemen */
+    margin-right: 20px; /* Jarak antar elemen secara horizontal */
+    padding: 10px;
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex; /* Menjadikan container flexbox */
+    flex-direction: column; /* Membuat anak-anak elemen disusun dalam kolom */
+    align-items: center; /* Menyusun anak-anak elemen di tengah-tengah secara vertikal */
+}
+
+.col-7:nth-child(3n) {
+    margin-right: 0; /* Menghilangkan margin-right pada elemen ke-3 untuk mendekatkannya */
+}
+
+.col-7 img {
+    max-width: 100%; /* Memastikan gambar tidak melebihi ukuran wadahnya */
+    border-radius: 5px; /* Memberikan sudut pada gambar */
+    height: 210;
+    width: 210px;
+    height: 285px;
+}
+
+.col-7 h4 {
+    margin-top: 10px;
+    font-size: 0.75em; /* Memperbesar ukuran teks judul */
+    color: #000000; /* Warna teks judul */
+}
+
+.col-7 h5 {
+    margin-top: 10px;
+    font-size: 0.5em; /* Ukuran teks artikel */
+    color: #000000; /* Warna teks artikel */
+}
+
+/* Efek hover untuk memberikan animasi saat dihover */
+.col-7:hover {
+    transform: scale(1.05); /* Memperbesar elemen saat dihover */
+}
+
+.reg-form {
+    max-width: none;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Tambahkan shadow di sini */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}

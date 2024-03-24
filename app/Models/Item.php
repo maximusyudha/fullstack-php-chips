@@ -12,4 +12,11 @@ class Item extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'description', 'content','category', 'image'];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
+
+

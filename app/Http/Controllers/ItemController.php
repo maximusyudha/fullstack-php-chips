@@ -62,7 +62,8 @@ class ItemController extends Controller
         // Store the item
         Item::create($validatedData);
 
-        return redirect()->route('items.index');
+        return redirect()->route('dashboard');
+
     }
 
     public function show($id)
@@ -102,7 +103,12 @@ class ItemController extends Controller
         // Update the item
         $item->update($validatedData);
 
-        return redirect()->route('items.index');
+        return redirect()->route('dashboard');
+
+    }
+
+    public function comments() {
+    return $this->hasMany(Comment::class);
     }
 
     public function destroy($id)
@@ -110,7 +116,7 @@ class ItemController extends Controller
         // Find the item and delete it
         $item = Item::findOrFail($id);
         $item->delete();
-        return redirect()->route('items.index');
+        return redirect()->route('dashboard');
     }
 }
 
