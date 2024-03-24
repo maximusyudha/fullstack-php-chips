@@ -23,12 +23,8 @@ Route::get('/items', [App\Http\Controllers\ItemController::class, 'filter'])->na
 
 
 #comment
-Route::get('/items/{item}/comments', [App\Http\Controllers\CommentController::class, 'index'])->name('comments.index');
-
-// Menyimpan komentar baru
+Route::get('/comments', [App\Http\Controllers\CommentController::class, 'store'])->name('comments.store');
 Route::post('/comments', [App\Http\Controllers\CommentController::class, 'store'])->name('comments.store');
-Route::get('/comments/{comment}/edit', [App\Http\Controllers\CommentController::class, 'edit'])->name('comments.edit');
-Route::put('/comments/{comment}', [App\Http\Controllers\CommentController::class, 'update'])->name('comments.update');
 Route::delete('/comments/{comment}', [App\Http\Controllers\CommentController::class, 'destroy'])->name('comments.destroy');
 
 Route::get('logout', function ()

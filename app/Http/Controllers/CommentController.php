@@ -45,7 +45,7 @@ class CommentController extends Controller
     {
         $comment->delete();
 
-        return redirect()->route('comments.index')->with('success', 'Comment deleted successfully.');
+        return redirect()->route('comments.store')->with('success', 'Comment deleted successfully.');
     }
 
     public function reply(Request $request, $commentId)

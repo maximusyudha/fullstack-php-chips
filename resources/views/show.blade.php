@@ -81,20 +81,15 @@
                 <p><strong>{{ $comment->user->name }}</strong> said:</p>
                 <p>{{ $comment->content }}</p>
                 <div class="comment-actions">
-                    @can('update', $comment)
-                        <form action="{{ route('comments.edit', $comment) }}" method="get" class="d-inline">
-                            @csrf
-                            <button type="submit" class="btn btn-sm btn-warning">Edit</button>
-                        </form>
-                    @endcan
-
-                    @can('delete', $comment)
-                        <form action="{{ route('comments.destroy', $comment) }}" method="post" class="d-inline">
+                    @if(auth()->user()->hasRole('admin') || auth()->id() == $comment->user_id)
+                        <form action="{{ route('comments.destroy', ['comment' => $comment->id] ) }}" method="post" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this comment?')">Delete</button>
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this comment?')">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
                         </form>
-                    @endcan
+                    @endif
                 </div>
             </div>
         @endforeach
@@ -102,8 +97,8 @@
         <p>No comments yet.</p>
     @endif
 
-    <!-- Form untuk menambahkan komentar -->
-    <form action="{{ route('comments.store') }}" method="post">
+    <!-- Form to add comments -->
+    <form action="{{ route('comments.store', ['item' => $item->id]) }}" method="post">
         @csrf
         <input type="hidden" name="item_id" value="{{ $item->id }}">
         <input type="hidden" name="user_id" value="{{ auth()->id() }}">
